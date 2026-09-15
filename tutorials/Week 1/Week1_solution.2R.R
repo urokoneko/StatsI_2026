@@ -1,0 +1,55 @@
+# remove objects
+rm(list=ls())
+# detach all libraries
+detachAllPackages <- function() {
+  basic.packages <- c("package:stats","package:graphics","package:grDevices","package:utils","package:datasets","package:methods","package:base")
+  package.list <- search()[ifelse(unlist(gregexpr("package:",search()))==1,TRUE,FALSE)]
+  package.list <- setdiff(package.list,basic.packages)
+  if (length(package.list)>0)  for (package in package.list) detach(package, character.only=TRUE)
+}
+detachAllPackages()
+
+#############
+# Basic stats
+#############
+
+# create vector y
+y <- c(0, 4, 4, 5, 7, 10) #create object called y containing these numbers
+
+#empty object
+demeanedSum <- NULL
+# starting from i to whatever the y value has
+for (i in 1:length(y)){
+  demeanedSum[i] <- y[i] - mean(y)
+}
+demeanedSumSimple <- y - mean(y)
+# take the sum of demeanedsumsimple
+sum(demeanedSumSimple)
+# squareed vale
+SquaredSum <- (demeanedSumSimple)^2
+# (1) find sum of y using the built-in R function
+sum_y <- sum(y) #name the object
+# (2) find mean of y using your "own" function
+mean_y  <- sum(y) / length(y)
+#mean(y) same thing
+# now do the same thing, but faster using the built-in R function
+mean(y)
+# (3) find sum of demeaned values
+
+# (4) calculate sum of squared error
+
+###########
+# Quantiles
+###########
+
+# create vector
+quantilesVec <- c(55, 84, 65, 54, 61, 67, 80, 59, 81, 82)
+
+# (1) calculate median 
+
+# (2) calculate quantiles
+
+# (3) make a histogram of state median income
+state.x77[,2]
+
+# remember to save your plot as a pdf
