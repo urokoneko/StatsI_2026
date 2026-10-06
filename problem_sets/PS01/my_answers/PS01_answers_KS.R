@@ -76,13 +76,7 @@ expenditure$Region <- factor(
 
 boxplot_expenditure <- ggplot(expenditure, aes(x = factor(Region) , y = Y)) +
   geom_boxplot() +
-  labs(title = "Expenditure on Shelters/Housing Assistance by Region", x = NULL, y = "Expenditure") +
-  stat_summary(
-  fun = mean,
-  geom = "point",
-  size = 2,
-  color = "red"
-  )
+  labs(title = "Expenditure on Shelters/Housing Assistance by Region", x = NULL, y = "Expenditure")
 boxplot_expenditure
 
 #Question 3

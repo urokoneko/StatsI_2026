@@ -141,7 +141,8 @@ A school counselor was curious about the average of IQ of the students in her sc
 Please plot the relationships among \emph{Y}, \emph{X1}, \emph{X2}, and \emph{X3}? What are the correlations among them (you just need to describe the graph and the relationships among them)?
 
 R:
-\lstinputlisting[firstline=55, lastline=67]{PS01_answers_KS.R}
+\lstinputlisting[firstline=55, lastline=68]{PS01_answers_KS.R}
+\newpage
 Result: \\
 Correlation Matrix
 \begin{verbatim}
@@ -152,56 +153,60 @@ X2 0.4482876 0.2056101 1.0000000 0.2210149
 X3 0.4636787 0.5952504 0.2210149 1.0000000
 \end{verbatim}
 Figure 1
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \vspace{.5cm}
-\includegraphics[width=10cm]{Rplot_X1_Y.pdf}\\
+\includegraphics[width=12cm]{Rplot_X1_Y.pdf}\\
 \vspace{.5cm}
 \parbox{15cm}{As the per capita expenditure on shelters/housing assistance (Y) increases, per capita personal income (X1) also tends to increase. The correlation coefficient (0.531) indicates a moderate positive correlation between Y and X1.}
 \end{figure}
-
+\newpage
 Figure 2
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \vspace{.5cm}
-\includegraphics[width=10cm]{Rplot_X2_Y.pdf}
+\includegraphics[width=12cm]{Rplot_X2_Y.pdf}
 
 \vspace{1cm}
 \parbox{15cm}{When the number of financially insecure residents per 100,000 (X2) is below about 300, per capita expenditure on shelters/housing assistance (Y) tends to decrease as X2 increases. However, when X2 is above 300, Y tends to increase as X2 increases. The correlation coefficient (0.448) indicates a moderate positive correlation between Y and X2 overall.}
 \end{figure}
-
+\newpage
 Figure 3
 \begin{figure}[H]
 	\centering
 	\vspace{.5cm}
 	\includegraphics[width=10cm]{Rplot_X3_Y.pdf}
-
+\vspace{1cm}
 	\parbox{15cm}{As the per capita expenditure on shelters/housing assistance (Y) increases, number of residents per thousand residing in urban areas (X3) also tends to increase. The correlation coefficient (0.448) indicates a moderate positive correlation between Y and X3.}
 \end{figure}
 \item
 Please plot the relationship between \emph{Y} and \emph{Region}? On average, which region has the highest per capita expenditure on housing assistance?\\
 
 R:
-\lstinputlisting[firstline=71, lastline=79]{PS01_answers_KS.R}
+\lstinputlisting[firstline=71, lastline=86]{PS01_answers_KS.R}
 \vspace{.5cm}
+Figure 4
 \begin{figure}[H]
 	\centering
 	\vspace{.5cm}
 	\includegraphics[width=10cm]{Rplot_boxplot.pdf}\\
 	\vspace{.5cm}
-	\parbox{15cm}{The graph shows that the West region has the highest average per capita expenditure on shelters/housing assistance.}
+	\parbox{15cm}{Figure 4 shows the distribution of per capita expenditure on shelters/housing assistance (Y) across different regions. The red dots in the boxplots represent the average expenditure for each region. The West region has the highest average per capita expenditure on shelters/housing assistance.}
 \end{figure}
+
 \item
 Please plot the relationship between \emph{Y} and \emph{X1}? Describe this graph and the relationship. Reproduce the above graph including one more variable \emph{Region} and display different regions with different types of symbols and colors.\\
 
 R:
 \lstinputlisting[firstline=83, lastline=86]{PS01_answers_KS.R}
+\newpage
+Figure 5
 \begin{figure}[H]
 	\centering
 	\vspace{.5cm}
 	\includegraphics[width=12cm]{Rplot_X1_Y_region.pdf}\\
 	\vspace{.5cm}
-	\parbox{15cm}{The graph suggests that there are positive correlations between per capita expenditure (Y) and personal income (X1) in the South and Northeast regions, while the relationship between X1 and Y seems less clear in the North Central and West regions.}
+	\parbox{15cm}{As Figure 1 suggests, there is a positive correlation between per capita expenditure (Y) and personal income (X1). When Region is added as another variable, Figure 5 shows that the relationship between X1 and Y seems less clear in the North Central and West regions compared with the Northeast and South regions.}
 \end{figure}
 \end{itemize}
 
